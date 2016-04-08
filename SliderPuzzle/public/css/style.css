@@ -1,0 +1,158 @@
+#PuzzleDiv {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    border: 4px solid black;
+    float: left;
+    margin: 10px 20px 10px 20px;
+}
+
+.tile {
+    border: 2px solid black;
+    display: inline-block;
+    position: absolute;
+    overflow: hidden;
+}
+
+body {
+    font-family: verdana, sans-serif;
+}
+
+h1#pageHeader {
+    font-weight: lighter;
+    margin: 0px;
+    padding: 8px;
+    background-color: lightsteelblue;
+    border-bottom: 4px solid black;
+    border-top: 4px solid black;
+}
+
+span#subtitle {
+    font-size: 0.8em;
+    font-weight: normal;
+    color: rgb(30,30,30);
+    letter-spacing: -0.1em;
+    padding-left: 20px;
+}
+
+h1.subHeader {
+    font-weight: lighter;
+    margin: 30px 0px;
+    padding: 8px;
+    background-color: lightsteelblue;
+    border-bottom: 4px solid black;
+    border-top: 4px solid black;
+}
+
+div.sideControls {
+    border: 4px solid black;
+    background-color: darkslategrey;
+    color: white;
+    float: left;
+    margin: 10px 0px 30px 0px;
+    padding: 12px;
+    width: 200px;
+    height: 376px;
+    position: relative;
+}
+
+div.rightMargin {
+    float: right;
+    display: block;
+    margin-right: 20px;
+    text-align: right;
+}
+
+div.sideControls input[type='number'] {
+    width: 50px;
+    font-size: 1.8em;
+    margin: 10px 0px;
+    background-color: darkslategrey;
+    color: white;
+    text-align: center;
+    border-style: none;
+}
+
+div.sideControls input[type='text'] {
+    width: 90%;
+    margin: 0px 4%;
+}
+
+div.sideControls label {
+    font-size: 1.2em;
+    margin-bottom: 6px;
+    text-shadow: 1px 1px 4px black;
+}
+
+div.sideControls button, div#controls input[type='submit'] {
+    padding: 4px 2px;
+}
+
+button#shuffleButton, button#imageButton {
+    font-size: 1.2em;
+    position: absolute;
+    top: 85%;
+    width: 80%;
+    left: 10%;
+}
+
+ul#imageHints {
+    list-style: none;
+    max-width: 90%;
+    height: 65%;
+    overflow: auto;
+    padding-left: 28px;
+    color: lightgrey;
+    font-size: 0.8em;
+    margin-top: 4px;
+}
+
+ul#imageHints li:hover {
+    background-color: slategrey;
+    cursor: pointer;
+}
+
+.clearing {
+    clear: both;
+}
+
+form#uploadForm {
+    border: 4px solid black;
+    background-color: darkslategrey;
+    color: white;
+    padding: 12px;
+    width: 880px;
+    position: relative;
+}
+
+form#uploadForm label {
+    font-size: 1.2em;
+    margin: 10px 0px;
+    text-shadow: 1px 1px 4px black;
+    display: inline-block;
+    text-align: right;
+    width: 140px;
+}
+
+form#uploadForm span {
+    display: block;
+    float: right;
+    width: 50%;
+}
+
+form#uploadForm input[type='text'] {
+    width: 30%;
+}
+
+form#uploadForm input[type='submit'] {
+    padding: 4px 2px;
+    font-size: 1.2em;
+    float: right;
+    margin-right: 20px;
+}
+
+div#frame {
+    width: 912px;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	
+	<link href="/css/style.css" rel="stylesheet">
+	<title>Slider Puzzle</title>
+	
+	<!-- jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    
+    <!-- angular -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    
+</head>
+<body>
+<div id="frame">
+    
+	<h1 id="pageHeader">Slider Puzzle <span id="subtitle"></span></h1>
+	
+	<p id="intro">
+		Play this fun puzzle! You can use the arrow keys, or click on the square you would like to move.
+	</p>
+    <div class="sideControls">
+        <form method="get" action="#" onsubmit="return chrisApp.updatePuzzle(this)">
+            <div class="rightMargin">
+                <label>Rows:</label>
+                <input id="rows" type="number" min="2" max="8" value="4" />
+            </div>
+            <div class="rightMargin">
+                <label>Columns:</label>
+                <input id="cols" type="number" min="2" max="8" value="4" />
+            </div>
+            <div class="rightMargin">
+                <input type="submit" value="Update Rows and Columns" />
+            </div>
+        </form>
+        <button id="shuffleButton" onclick="chrisApp.shuffle()">Shuffle!</button>
+    </div>
+	
+	<div id="PuzzleDiv"></div>
+    
+    <div class="sideControls">
+        <label>Select Image:</label><br />
+        <input type="text" id="imageName" />
+        <button id="imageButton" onclick="chrisApp.changeImage()">Change Image</button>
+        <ul id="imageHints"></ul>
+    </div>
+    
+    <h1 class="clearing subHeader">Upload an Image</h1>
+    <form id="uploadForm" method="post" action="/uploadImage" enctype="multipart/form-data" >
+        <label>Image Name:</label>
+        <input type="text" name="uploadName" id="uploadName" required pattern="[a-zA-Z_0-9]{3,40}" title="3 - 40 characters: letters, numbers and underscores (no spaces)"/>
+        <span>* Please choose a name with no spaces, made up of letters, numbers or underscore (_) character *</span><br />
+        <label>Image File:</label>
+        <input name="uploadFile" id="uploadFile" type="file" accept="image/*" requred /><br />
+        <input type="submit" value="Upload Image" />
+        <div class="clearing"></div>
+    </form>
+        
+    <p id="testing"></p>
+
+	<script type="text/javascript" src="/js/sliderScripts.js"></script>
+
+</div>
+</body>
+</html>
